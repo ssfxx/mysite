@@ -1,0 +1,22 @@
+{% extends "../base.html" %}
+{% block title %}{{ article.title }}{% endblock %}
+<br />
+{% block content %}
+    <div class="row text-center vertical-middle-sm">
+        <h1>{{ article.title }}</h1>
+        <br />
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-8">
+            <p>{{ article.body }}</p>
+            <br />
+            <br />
+            <p align="right"><span>{{ article.author.username }} </span><span style="margin-left: 20px"> {{ publish }}</span></p>
+            <p align="right"><a href="/blog/">返回博客主页</a> </p>
+        </div>
+        <div class="col-xs-6 col-md-4">
+            <h2>广告位</h2>
+            <p>跟老七学PYTHON DJANGO www.itdiffer.com<a href="https://www.baidu.com"><img width="150px" src="../../static/images/baidu.png"></a> </p>
+    </div>
+    </div>
+{% endblock %}

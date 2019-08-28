@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <div class="row text-center vertical-middle-sm">
+
+        <h1>Login</h1>
+        <p>Input your username and password</p>
+
+        <form class="form-horizontal" name="my form" action="." method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <!-- 注意此处，很容易忘记添加Label等标签，部分文档并未写这种信息，需要自己手动写登录框的一些语句 如下：当然也可以是table等其他格式的html form表单 -->
+            <p>
+                <label for="id_username">账号：</label>
+                <input id="id_username" name="username" required="" type="text">
+            </p>
+            <p>
+                <label for="id_password">密码：</label>
+                <input id="id_password" name="password" required="" type="password">
+            </p>
+            <input type="submit" value="Login">
+            <input type="reset" value="清除登录信息">
+        </form>
+    </div>
+{% endblock %}
