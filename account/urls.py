@@ -9,5 +9,7 @@ urlpatterns = [
     url(r'^new-login/$',auth_views.LoginView.as_view(template_name='account/login.html')),
     #url(r'^logout/$',auth_views.LogoutView.as_view(template_name='registration/logged_out.html'),name='user_logout'),
     url(r'^logout/$',auth_views.LogoutView.as_view(template_name='account/logout.html'),name='user_logout'),
-    url(r'^register/$',views.register,name='user_register'),
+    url(r'^register/$',views.register2,name='user_register'),
+    url(r'^password_change/$',views.password_change,name='password_change'),
+    url(r'^password_change_done/$',views.password_change_done,name='password_change_done'),
 ]

@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth import authenticate,login
 from .forms import LoginForm,RegistrationForm,UserProfileForm
-# Create your views here.
 
+# Create your views here.
 
 def user_login(request):
     if request.method == "POST":
@@ -57,3 +57,9 @@ def register2(request):
         userprofile_form = UserProfileForm()
         return render(request,"account/register.html",{"form":user_form, "profile": userprofile_form})
 
+
+def password_change(request):
+    pass
+
+def password_change_done(request):
+    pass
